@@ -59,6 +59,7 @@ negates(?) your image!
 #### Queries
 
 - image: Your target image url
+- sigma: a value between 0.3 and 500 representing the sigma of the Gaussian mask, where `sigma = 1 + radius / 2`.
 
 <br>
 
