@@ -1,28 +1,30 @@
-# img-api-node
+# serrated
 
-An image manipulation API, powered by express!
+[The sharp image manipulation Node.js module](https://www.npmjs.com/package/sharp) — turned to a web API
 
 ## Set-up
+
+### Installation
 
 ```
 npm i
 ```
 
-then
+### Starting the Web Servers
+
+For development:
 
 ```
 npm run start:dev
 ```
 
-nodemon ^
+<br>
 
-while
+For production:
 
 ```
 node src/app.js
 ```
-
-production ^
 
 ## Endpoints
 
@@ -39,12 +41,13 @@ rotates your image!
 
 <br>
 
-![](https://cdn.discordapp.com/attachments/743817386792058971/857459995867217970/rotate.png) \
+<img src="https://cdn.discordapp.com/attachments/743817386792058971/857459995867217970/rotate.png" height="300px" />
+
 180 degrees ^
 
 ### /negate
 
-negates(?) your image!
+Produce the "negative" of the image
 
 #### Queries
 
@@ -52,9 +55,11 @@ negates(?) your image!
 
 <br>
 
-![](https://cdn.discordapp.com/attachments/743817386792058971/857462713381945344/negate.png)
+<img src="https://cdn.discordapp.com/attachments/743817386792058971/857462713381945344/negate.png" height="300px" />
 
 ### /blur
+
+Blurs the given image
 
 #### Queries
 
@@ -63,4 +68,4 @@ negates(?) your image!
 
 <br>
 
-![](https://cdn.discordapp.com/attachments/743817386792058971/857472063924338718/blur.png)
+<img src="https://cdn.discordapp.com/attachments/743817386792058971/857472063924338718/blur.png" height="300px" />
