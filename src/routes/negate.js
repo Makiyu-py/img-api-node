@@ -1,15 +1,12 @@
-const is = require('../helpers/is.js');
 const to = require('../helpers/to.js');
 const sharp = require('sharp');
-const bent = require('bent');
 const router = require('express').Router();
 
-const getBuffer = bent('buffer');
 
 router.get('/negate', async (req, res) => {
 	let imgUrl = req.query?.image ?? undefined;
 	if (typeof imgUrl !== 'undefined') {
-		let buffer = await getBuffer(`${imgUrl}`);
+		let buffer = await to.buffer(`${imgUrl}`);
 		sharp(buffer)
 			.negate()
 			.toBuffer(function (err, outputBuffer, info) {

@@ -1,15 +1,12 @@
 const is = require('../helpers/is.js');
 const to = require('../helpers/to.js');
 const sharp = require('sharp');
-const bent = require('bent');
 const router = require('express').Router();
-
-const getBuffer = bent('buffer');
 
 router.get('/blur', async (req, res) => {
 	let imgUrl = req.query?.image ?? undefined;
 	if (is.defined(imgUrl)) {
-		let buffer = await getBuffer(`${imgUrl}`);
+		let buffer = await to.buffer(`${imgUrl}`);
 		let sigma = req.query?.sigma ?? undefined;
 		if (!is.properSigma(sigma)) {
 			res.status(400).json({
